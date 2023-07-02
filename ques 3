@@ -1,0 +1,11 @@
+import re
+
+def extract_emails(text):
+    email_regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b'
+    emails = re.findall(email_regex, text)
+    return emails
+
+# Example usage
+text = "Please contact me at john@example.com for further information. You can also reach me at jane@example.com."
+emails = extract_emails(text)
+print(emails)
