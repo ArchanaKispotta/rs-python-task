@@ -1,0 +1,28 @@
+def calculate_total_marks(marks):
+    total_marks = 0
+    for subject_marks in marks:
+        total_marks += subject_marks
+    return total_marks
+
+
+student_marks = {
+    'archana': [85, 90, 92, 88],
+    'arati': [78, 80, 85, 92],
+    'apurba': [92, 88, 95, 90],
+    'ankita': [80, 86, 88, 92],
+}
+
+student_total_marks = {}
+for student, marks in student_marks.items():
+    total_marks = calculate_total_marks(marks)
+    student_total_marks[student] = total_marks
+
+topper = max(student_total_marks, key=student_total_marks.get)
+topper_score = student_total_marks[topper]
+
+print("Student Total Marks:")
+for student, total_marks in student_total_marks.items():
+    print(f"{student}: {total_marks}")
+
+print(f"\nThe topper is {topper} with a score of {topper_score} marks.")
+
