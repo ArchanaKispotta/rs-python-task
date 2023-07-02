@@ -5,7 +5,6 @@ def extract_emails(text):
     emails = re.findall(email_regex, text)
     return emails
 
-# Example usage
-text = "Please contact me at john@example.com for further information. You can also reach me at jane@example.com."
+text = "send your project to robotics369@gmail.com"
 emails = extract_emails(text)
 print(emails)
