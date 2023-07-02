@@ -1,0 +1,16 @@
+def character_frequency(string):
+    frequency = {}
+
+    for char in string:
+        if char.isspace():
+            continue
+
+frequency[char] = frequency.get(char, 0) + 1
+
+sorted_chars = sorted(frequency)
+
+for char in sorted_chars:
+    print(f"{char}: {frequency[char]}")
+
+string = "archana"
+dcharacter_frequency(string)
